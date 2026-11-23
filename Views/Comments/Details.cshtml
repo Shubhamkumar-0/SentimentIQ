@@ -1,0 +1,141 @@
+@model Comment
+@{
+    ViewData["Title"] = $"Feedback #{Model.Id} Forensic Report";
+}
+
+<div style="max-width: 960px; margin: 0 auto;">
+    <!-- Top Action Toolbar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+        <a asp-action="History" class="btn btn-secondary btn-sm">
+            &larr; Back to Feedback Repository
+        </a>
+        <div style="display: flex; gap: 10px;">
+            <a asp-action="Create" class="btn btn-primary btn-sm">+ Add New Feedback</a>
+            <form asp-action="Delete" asp-route-id="@Model.Id" method="post" 
+                  onsubmit="return confirm('Permanently delete this consultation feedback?');">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-danger btn-sm">Delete Comment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Feedback Card -->
+    <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+            <div>
+                <span class="pill @Model.Sentiment.ToLowerInvariant()" style="font-size: 14px; padding: 6px 14px;">
+                    @Model.Sentiment Sentiment
+                </span>
+                <span style="font-size: 13px; color: #64748b; margin-left: 12px;">
+                    Consultation Feedback #@Model.Id
+                </span>
+            </div>
+            <div style="font-size: 12px; color: #64748b;">
+                Submitted on @Model.CreatedAt.ToString("dd MMMM yyyy, hh:mm:ss tt")
+            </div>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+            <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 6px;">
+                Client / User Name:
+            </div>
+            <h3 style="font-size: 17px; color: #0f172a; margin-bottom: 12px;">@Model.UserName</h3>
+
+            <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 6px;">
+                Original Consultation Feedback Text:
+            </div>
+            <p style="font-size: 16px; color: #1e293b; line-height: 1.6; font-style: italic;">
+                "@Model.CommentText"
+            </p>
+        </div>
+
+        <!-- Metrics Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block;">Calibrated Confidence</span>
+                <strong style="font-size: 22px; color: #0f172a;">@(Math.Round(Model.Confidence * 100))%</strong>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block;">Sentiment Polarity</span>
+                <strong style="font-size: 22px; color: @(Model.SentimentScore >= 0 ? "#10b981" : "#f43f5e");">
+                    @(Model.SentimentScore > 0 ? "+" : "")@Model.SentimentScore
+                </strong>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block;">Primary Emotion</span>
+                <strong style="font-size: 20px; color: #7c3aed;">@Model.PrimaryEmotion</strong>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block;">Mixed Polarity</span>
+                <strong style="font-size: 20px; color: @(Model.IsMixed ? "#d97706" : "#64748b");">
+                    @(Model.IsMixed ? "Yes (Compound)" : "No")
+                </strong>
+            </div>
+        </div>
+
+        <!-- Aspect-Based Sentiment Details -->
+        <div style="margin-bottom: 26px;">
+            <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Aspect-Based Sentiment Decomposition
+            </h4>
+
+            @if (!Model.AspectResults.Any())
+            {
+                <div style="background: #f8fafc; padding: 16px; border-radius: 6px; font-size: 13px; color: #64748b;">
+                    No specific consultation aspects (Staff Behaviour, Waiting Time, Service Quality, Facilities, Communication) were explicitly isolated in this comment.
+                </div>
+            }
+            else
+            {
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;">
+                    @foreach (var aspect in Model.AspectResults)
+                    {
+                        <div style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; background: #ffffff;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                                <strong style="font-size: 14px; color: #0f172a;">@aspect.Aspect</strong>
+                                <span class="pill @aspect.Sentiment.ToLowerInvariant()" style="font-size: 11px;">
+                                    @aspect.Sentiment
+                                </span>
+                            </div>
+                            <div style="font-size: 12px; color: #475569; margin-bottom: 6px;">
+                                Score: <strong>@(aspect.Score > 0 ? "+" : "")@aspect.Score</strong>
+                            </div>
+                            <div style="font-size: 12px; color: #64748b; font-style: italic; background: #f8fafc; padding: 6px 10px; border-radius: 4px;">
+                                @aspect.MatchedPhrase
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <!-- NLP Model Execution Metadata -->
+        @if (Model.SentimentResult != null)
+        {
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                <h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">
+                    NLP Model Pipeline & Diagnostic Trace
+                </h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
+                    <div>
+                        <span style="color: #64748b; display: block;">Model Pipeline:</span>
+                        <strong>@Model.SentimentResult.ModelEngine</strong>
+                    </div>
+                    <div>
+                        <span style="color: #64748b; display: block;">Negations Identified:</span>
+                        <strong>@Model.SentimentResult.NegationCount triggers</strong>
+                    </div>
+                    <div>
+                        <span style="color: #64748b; display: block;">Emotion Probability Breakdown:</span>
+                        <code>@Model.SentimentResult.DetectedEmotions</code>
+                    </div>
+                    <div>
+                        <span style="color: #64748b; display: block;">Normalized & Expanded Tokens:</span>
+                        <code>@Model.SentimentResult.NormalizedTokens</code>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

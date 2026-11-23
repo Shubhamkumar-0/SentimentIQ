@@ -1,0 +1,195 @@
+@model Comment
+@{
+    ViewData["Title"] = "Submit Consultation Feedback";
+}
+
+<div style="max-width: 860px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">Submit Consultation Feedback</h2>
+                <p class="card-subtitle">Real-time NLP sentiment analysis will evaluate this feedback upon submission.</p>
+            </div>
+            <a asp-action="Index" class="btn btn-secondary btn-sm">Back to Dashboard</a>
+        </div>
+
+        <!-- Quick-Fill Faculty Test Cases -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 22px;">
+            <div style="font-size: 12px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 8px;">
+                Quick-Test Standard Benchmark Cases (Click to Test):
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="The staff was excellent and helpful.">
+                    1. Positive ("Staff excellent & helpful")
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="The waiting time was terrible.">
+                    2. Negative ("Waiting time terrible")
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="The consultation happened yesterday.">
+                    3. Neutral ("Happened yesterday")
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="The staff was helpful but the waiting time was terrible.">
+                    4. Mixed ("Staff helpful BUT wait terrible")
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="The service was not good.">
+                    5. Negation ("Service NOT good")
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm sample-btn" 
+                        data-comment="I am very frustrated with the poor service.">
+                    6. Frustration ("Frustrated with poor service")
+                </button>
+            </div>
+        </div>
+
+        <form asp-action="Create" method="post" id="feedbackForm">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-negative" style="margin-bottom: 14px;"></div>
+
+            <div class="form-group">
+                <label asp-for="UserName" class="form-label">Client / User Name</label>
+                <input asp-for="UserName" class="form-control" id="userNameInput" placeholder="e.g. Dr. Ramesh Sharma or Patient Aditi Rao" />
+                <span asp-validation-for="UserName" class="text-negative" style="font-size: 12px;"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CommentText" class="form-label">Consultation Feedback / Comment</label>
+                <textarea asp-for="CommentText" class="form-control" id="commentTextInput" rows="5" 
+                          placeholder="Type your experience regarding staff, waiting time, facilities, communication, or overall treatment..."></textarea>
+                <span asp-validation-for="CommentText" class="text-negative" style="font-size: 12px;"></span>
+            </div>
+
+            <!-- Interactive AI Live Preview Card -->
+            <div class="ai-preview-card" id="aiPreviewCard" style="display: none;">
+                <div class="preview-header">
+                    <span class="preview-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        Live AI Sentiment & Aspect Prediction
+                    </span>
+                    <span id="previewEngine" style="font-size: 11px; color: #64748b; font-weight: 600;">Hybrid Engine</span>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px; flex-wrap: wrap;">
+                    <div>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Sentiment:</span>
+                        <span id="previewSentimentPill" class="pill neutral">Analyzing...</span>
+                    </div>
+                    <div>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Confidence:</span>
+                        <strong id="previewConfidence" style="font-size: 15px;">--%</strong>
+                    </div>
+                    <div>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Primary Emotion:</span>
+                        <span id="previewEmotion" class="emotion-tag">--</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span style="font-size: 12px; color: #64748b; display: block; margin-bottom: 6px;">Detected Aspect Sentiments:</span>
+                    <div id="previewAspectsContainer" style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="font-size: 12px; color: #94a3b8;">No specific clinical aspects detected yet.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 26px;">
+                <button type="submit" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    Analyze & Persist Feedback
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const commentInput = document.getElementById("commentTextInput");
+        const userNameInput = document.getElementById("userNameInput");
+        const previewCard = document.getElementById("aiPreviewCard");
+        const sentimentPill = document.getElementById("previewSentimentPill");
+        const confidenceEl = document.getElementById("previewConfidence");
+        const emotionEl = document.getElementById("previewEmotion");
+        const aspectsContainer = document.getElementById("previewAspectsContainer");
+        const previewEngine = document.getElementById("previewEngine");
+
+        // Quick sample filler
+        document.querySelectorAll(".sample-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const comment = this.getAttribute("data-comment");
+                commentInput.value = comment;
+                if (!userNameInput.value) {
+                    userNameInput.value = "Consultation Evaluator";
+                }
+                triggerLiveAnalysis(comment);
+            });
+        });
+
+        // Debounced live typing prediction
+        let debounceTimer = null;
+        commentInput.addEventListener("input", function () {
+            clearTimeout(debounceTimer);
+            const text = this.value.trim();
+            if (text.length < 3) {
+                previewCard.style.display = "none";
+                return;
+            }
+            debounceTimer = setTimeout(() => {
+                triggerLiveAnalysis(text);
+            }, 300);
+        });
+
+        async function triggerLiveAnalysis(text) {
+            previewCard.style.display = "block";
+            sentimentPill.className = "pill neutral";
+            sentimentPill.textContent = "Predicting...";
+
+            try {
+                const response = await fetch('/Comments/LiveAnalyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // Update Sentiment Pill
+                    sentimentPill.textContent = data.sentiment;
+                    sentimentPill.className = `pill ${data.sentiment.toLowerCase()}`;
+
+                    // Update Confidence
+                    confidenceEl.textContent = `${Math.round(data.confidence * 100)}%`;
+
+                    // Update Emotion
+                    emotionEl.textContent = data.primaryEmotion || "Neutral";
+
+                    // Update Engine
+                    previewEngine.textContent = data.modelEngine || "ML.NET + NLP";
+
+                    // Update Aspects
+                    aspectsContainer.innerHTML = "";
+                    if (data.aspects && data.aspects.length > 0) {
+                        data.aspects.forEach(asp => {
+                            const badge = document.createElement("span");
+                            badge.className = `aspect-badge ${asp.sentiment.toLowerCase()}`;
+                            badge.textContent = `${asp.aspect}: ${asp.sentiment}`;
+                            aspectsContainer.appendChild(badge);
+                        });
+                    } else {
+                        aspectsContainer.innerHTML = '<span style="font-size: 12px; color: #94a3b8;">General comment (no specific clinical aspects isolated)</span>';
+                    }
+                }
+            } catch (err) {
+                console.error("Error calling live analyzer:", err);
+            }
+        }
+    });
+</script>
+}

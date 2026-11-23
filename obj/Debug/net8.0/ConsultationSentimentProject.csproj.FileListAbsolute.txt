@@ -1,0 +1,256 @@
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\appsettings.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.staticwebassets.runtime.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.staticwebassets.endpoints.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.exe
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.deps.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.runtimeconfig.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.runtimeconfig.dev.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\ConsultationSentimentProject.pdb
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Azure.Core.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Azure.Identity.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.ClientModel.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.csproj.AssemblyReference.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\HotReload\browser-tools-key.public.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\HotReload\browser-tools-key.private.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.AssemblyInfoInputs.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.AssemblyInfo.cs
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.csproj.CoreCompileInputs.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.MvcApplicationPartsAssemblyInfo.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.RazorAssemblyInfo.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.RazorAssemblyInfo.cs
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\jsmodules\jsmodules.build.manifest.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\scopedcss\scopedcss.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\scopedcss\bundle\ConsultationSentimentProject.styles.css
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\staticwebassets.build.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\staticwebassets.development.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\swae.build.ex.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\Consulta.CDD51825.Up2Date
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\refint\ConsultationSentimentProject.dll
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.pdb
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ConsultationSentimentProject.genruntimeconfig.cache
+D:\Download\Consultation_Sentiment_Analysis_Project (2)\ConsultationSentimentProject\obj\Debug\net8.0\ref\ConsultationSentimentProject.dll
+D:\myproject\bin\Debug\net8.0\appsettings.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.staticwebassets.endpoints.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.staticwebassets.runtime.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.exe
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.deps.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.runtimeconfig.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.runtimeconfig.dev.json
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.dll
+D:\myproject\bin\Debug\net8.0\ConsultationSentimentProject.pdb
+D:\myproject\bin\Debug\net8.0\Azure.Core.dll
+D:\myproject\bin\Debug\net8.0\Azure.Identity.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\myproject\bin\Debug\net8.0\System.ClientModel.dll
+D:\myproject\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\myproject\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\myproject\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\myproject\bin\Debug\net8.0\System.Memory.Data.dll
+D:\myproject\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\myproject\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\myproject\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\myproject\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\myproject\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\myproject\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.csproj.AssemblyReference.cache
+D:\myproject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js
+D:\myproject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js
+D:\myproject\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js
+D:\myproject\obj\Debug\net8.0\HotReload\browser-tools-key.public.json
+D:\myproject\obj\Debug\net8.0\HotReload\browser-tools-key.private.json
+D:\myproject\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.AssemblyInfoInputs.cache
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.AssemblyInfo.cs
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.csproj.CoreCompileInputs.cache
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.MvcApplicationPartsAssemblyInfo.cache
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.RazorAssemblyInfo.cache
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.RazorAssemblyInfo.cs
+D:\myproject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\myproject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\myproject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\myproject\obj\Debug\net8.0\jsmodules\jsmodules.build.manifest.json
+D:\myproject\obj\Debug\net8.0\scopedcss\scopedcss.cache
+D:\myproject\obj\Debug\net8.0\scopedcss\bundle\ConsultationSentimentProject.styles.css
+D:\myproject\obj\Debug\net8.0\staticwebassets.build.json
+D:\myproject\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\myproject\obj\Debug\net8.0\staticwebassets.development.json
+D:\myproject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\myproject\obj\Debug\net8.0\swae.build.ex.cache
+D:\myproject\obj\Debug\net8.0\Consulta.CDD51825.Up2Date
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.dll
+D:\myproject\obj\Debug\net8.0\refint\ConsultationSentimentProject.dll
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.pdb
+D:\myproject\obj\Debug\net8.0\ConsultationSentimentProject.genruntimeconfig.cache
+D:\myproject\obj\Debug\net8.0\ref\ConsultationSentimentProject.dll
+D:\myproject\bin\Debug\net8.0\Humanizer.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.Core.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.Data.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.KMeansClustering.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.PCA.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.StandardTrainers.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.Transforms.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.CpuMath.dll
+D:\myproject\bin\Debug\net8.0\Microsoft.ML.DataView.dll
+D:\myproject\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\myproject\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\myproject\bin\Debug\net8.0\System.CodeDom.dll
+D:\myproject\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\myproject\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\myproject\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\myproject\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\myproject\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\myproject\bin\Debug\net8.0\System.Numerics.Tensors.dll
+D:\myproject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\myproject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\myproject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\myproject\bin\Debug\net8.0\runtimes\linux-arm\native\libLdaNative.so
+D:\myproject\bin\Debug\net8.0\runtimes\linux-arm64\native\libLdaNative.so
+D:\myproject\bin\Debug\net8.0\runtimes\linux-x64\native\libLdaNative.so
+D:\myproject\bin\Debug\net8.0\runtimes\osx-arm64\native\libLdaNative.dylib
+D:\myproject\bin\Debug\net8.0\runtimes\osx-x64\native\libLdaNative.dylib
+D:\myproject\bin\Debug\net8.0\runtimes\win-arm64\native\LdaNative.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-x64\native\LdaNative.dll
+D:\myproject\bin\Debug\net8.0\runtimes\win-x86\native\LdaNative.dll

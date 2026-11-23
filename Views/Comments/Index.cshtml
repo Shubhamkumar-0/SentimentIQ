@@ -1,0 +1,332 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = "Executive Dashboard";
+}
+
+<!-- KPI Metric Cards Grid -->
+<section class="kpi-grid">
+    <div class="kpi-card total">
+        <div class="kpi-title">Total Consultations</div>
+        <div class="kpi-value">@Model.TotalFeedback</div>
+        <div class="kpi-subtext">Avg Confidence: <strong>@Model.AverageConfidence%</strong></div>
+    </div>
+    <div class="kpi-card positive">
+        <div class="kpi-title">Positive Feedback</div>
+        <div class="kpi-value text-positive">@Model.PositiveCount</div>
+        <div class="kpi-subtext"><strong class="text-positive">@Model.PositivePercentage%</strong> of total</div>
+    </div>
+    <div class="kpi-card negative">
+        <div class="kpi-title">Negative Feedback</div>
+        <div class="kpi-value text-negative">@Model.NegativeCount</div>
+        <div class="kpi-subtext"><strong class="text-negative">@Model.NegativePercentage%</strong> of total</div>
+    </div>
+    <div class="kpi-card neutral">
+        <div class="kpi-title">Neutral Feedback</div>
+        <div class="kpi-value text-neutral">@Model.NeutralCount</div>
+        <div class="kpi-subtext"><strong class="text-neutral">@Model.NeutralPercentage%</strong> of total</div>
+    </div>
+    <div class="kpi-card mixed">
+        <div class="kpi-title">Mixed Sentiment</div>
+        <div class="kpi-value text-mixed">@Model.MixedCount</div>
+        <div class="kpi-subtext">Net Score: <strong class="@(Model.NetSentimentScore >= 0 ? "text-positive" : "text-negative")">@(Model.NetSentimentScore > 0 ? "+" : "")@Model.NetSentimentScore</strong></div>
+    </div>
+</section>
+
+<!-- Visual Analytics Row 1: Distribution & Trend -->
+<section class="charts-grid-2">
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">Sentiment Distribution</h2>
+                <p class="card-subtitle">Breakdown across all analyzed comments</p>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="sentimentDoughnutChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">Sentiment Trajectory Over Time</h2>
+                <p class="card-subtitle">Daily trend of Positive vs Negative vs Neutral feedback</p>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="sentimentTrendChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- Visual Analytics Row 2: Aspect-Based Intelligence & Emotion Radar -->
+<section class="charts-grid-3">
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">Aspect-Based Sentiment Intelligence</h2>
+                <p class="card-subtitle">Sentiment breakdown across 5 clinical & advisory dimensions</p>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="aspectBarChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h2 class="card-title">Emotional Spectrum</h2>
+                <p class="card-subtitle">Dominant client emotional states</p>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="emotionRadarChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- Voice of Client: Complaints & Praises -->
+<section class="insights-grid">
+    <div class="insight-card complaints">
+        <div class="insight-title text-negative">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Critical Pain Points & Complaints
+        </div>
+        <ul class="insight-list">
+            @foreach (var complaint in Model.TopComplaints)
+            {
+                <li class="insight-item">@complaint</li>
+            }
+        </ul>
+    </div>
+
+    <div class="insight-card praises">
+        <div class="insight-title text-positive">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            Most Appreciated Service Areas
+        </div>
+        <ul class="insight-list">
+            @foreach (var praise in Model.TopPraises)
+            {
+                <li class="insight-item">@praise</li>
+            }
+        </ul>
+    </div>
+</section>
+
+<!-- Recent Comments Table -->
+<section class="card" style="margin-top: 10px;">
+    <div class="card-header">
+        <div>
+            <h2 class="card-title">Recent Consultation Comments</h2>
+            <p class="card-subtitle">Live stream of incoming client feedback</p>
+        </div>
+        <a asp-action="History" class="btn btn-secondary btn-sm">View All Feedback</a>
+    </div>
+
+    @if (!Model.RecentComments.Any())
+    {
+        <div style="text-align: center; padding: 40px 0; color: #64748b;">
+            <p>No feedback comments in the database yet.</p>
+            <a asp-action="Create" class="btn btn-primary btn-sm" style="margin-top: 12px;">Submit First Comment</a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Client / User</th>
+                        <th>Comment Text</th>
+                        <th>Sentiment</th>
+                        <th>Confidence</th>
+                        <th>Emotion</th>
+                        <th>Detected Aspects</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.RecentComments)
+                    {
+                        <tr>
+                            <td><strong>@item.UserName</strong></td>
+                            <td style="max-width: 320px;">@item.CommentText</td>
+                            <td>
+                                <span class="pill @item.Sentiment.ToLowerInvariant()">
+                                    @item.Sentiment
+                                </span>
+                            </td>
+                            <td>@(Math.Round(item.Confidence * 100))%</td>
+                            <td>
+                                <span class="emotion-tag">@item.PrimaryEmotion</span>
+                            </td>
+                            <td>
+                                @if (item.AspectResults.Any())
+                                {
+                                    @foreach (var asp in item.AspectResults)
+                                    {
+                                        <span class="aspect-badge @asp.Sentiment.ToLowerInvariant()">
+                                            @asp.Aspect: @asp.Sentiment
+                                        </span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span style="color: #94a3b8; font-size: 11px;">General</span>
+                                }
+                            </td>
+                            <td style="white-space: nowrap; color: #64748b; font-size: 12px;">
+                                @item.CreatedAt.ToString("dd MMM yyyy, hh:mm tt")
+                            </td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary btn-sm" style="padding: 4px 8px;">
+                                    Inspect
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>
+
+@section Scripts {
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 1. Sentiment Distribution Doughnut Chart
+        const doughnutCtx = document.getElementById('sentimentDoughnutChart').getContext('2d');
+        new Chart(doughnutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Negative', 'Neutral', 'Mixed'],
+                datasets: [{
+                    data: [@Model.PositiveCount, @Model.NegativeCount, @Model.NeutralCount, @Model.MixedCount],
+                    backgroundColor: ['#10b981', '#f43f5e', '#64748b', '#f59e0b'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { weight: '600' } } }
+                },
+                cutout: '65%'
+            }
+        });
+
+        // 2. Sentiment Trajectory Trend Chart
+        const trendCtx = document.getElementById('sentimentTrendChart').getContext('2d');
+        new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TrendLabels)),
+                datasets: [
+                    {
+                        label: 'Positive',
+                        data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TrendPositive)),
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.35,
+                        fill: true
+                    },
+                    {
+                        label: 'Negative',
+                        data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TrendNegative)),
+                        borderColor: '#f43f5e',
+                        backgroundColor: 'rgba(244, 63, 94, 0.1)',
+                        tension: 0.35,
+                        fill: true
+                    },
+                    {
+                        label: 'Neutral',
+                        data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TrendNeutral)),
+                        borderColor: '#64748b',
+                        borderDash: [4, 4],
+                        tension: 0.35,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, ticks: { precision: 0 } }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } }
+                }
+            }
+        });
+
+        // 3. Aspect Breakdown Bar Chart
+        const aspectLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.AspectSummaries.Keys));
+        const aspectPos = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.AspectSummaries.Values.Select(v => v.PositiveMentions)));
+        const aspectNeg = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.AspectSummaries.Values.Select(v => v.NegativeMentions)));
+        const aspectNeu = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.AspectSummaries.Values.Select(v => v.NeutralMentions)));
+
+        const aspectCtx = document.getElementById('aspectBarChart').getContext('2d');
+        new Chart(aspectCtx, {
+            type: 'bar',
+            data: {
+                labels: aspectLabels,
+                datasets: [
+                    { label: 'Positive', data: aspectPos, backgroundColor: '#10b981' },
+                    { label: 'Negative', data: aspectNeg, backgroundColor: '#f43f5e' },
+                    { label: 'Neutral', data: aspectNeu, backgroundColor: '#64748b' }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { beginAtZero: true, ticks: { precision: 0 } }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } }
+                }
+            }
+        });
+
+        // 4. Emotion Radar Chart
+        const emotionLabels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.EmotionCounts.Keys));
+        const emotionData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.EmotionCounts.Values));
+
+        const emotionCtx = document.getElementById('emotionRadarChart').getContext('2d');
+        new Chart(emotionCtx, {
+            type: 'radar',
+            data: {
+                labels: emotionLabels,
+                datasets: [{
+                    label: 'Emotion Prevalence',
+                    data: emotionData,
+                    backgroundColor: 'rgba(139, 92, 246, 0.25)',
+                    borderColor: '#8b5cf6',
+                    pointBackgroundColor: '#8b5cf6',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#8b5cf6'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: { beginAtZero: true, ticks: { precision: 0 } }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    });
+</script>
+}
