@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sentiment Analysis of Comments Received Through Consultation Module
 ## AI-Powered Consultation Feedback Intelligence System
 
@@ -150,3 +151,6 @@ See [`INTERVIEW_GUIDE.md`](./INTERVIEW_GUIDE.md) for detailed explanations of:
 - Mathematical formulation of Precision, Recall, F1, and Confusion Matrix
 - Relational database schema design and EF Core migrations
 - Calibrated confidence calculation
+=======
+# SentimentIQ
+>>>>>>> b16bb6c9d5ebebca36a982cc67532890c685f636
